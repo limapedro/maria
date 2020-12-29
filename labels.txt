@@ -1,5 +1,5 @@
-time|getTime
 open|chrome
-weather|getWeather
-open|notepad
 time|getDate
+time|getTime
+open|notepad
+weather|getWeather
