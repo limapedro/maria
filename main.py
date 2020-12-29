@@ -18,6 +18,21 @@ def speak(text):
     engine.runAndWait()
 
 
+def evaluate(text):
+    #Reconhecer entidade do texto. 
+    entity = classify(text)
+    if entity == 'time\getTime':
+        speak(core.SystemInfo.get_time())
+    elif entity == 'time\getDate':
+        speak(core.SystemInfo.get_date())
+
+    # Abrir programas
+    elif entity == 'open\notepad':
+        speak('Abrindo o bloco de notas')
+        os.system('notepad.exe')
+
+    print('Text: {}  Entity: {}'.format(text, entity))
+
 # Reconhecimento de fala
 
 model = Model('model')
@@ -38,13 +53,6 @@ while True:
 
         if result is not None:
             text = result['text']
+            evaluate(text)
 
-            # Reconhecer entidade do texto.
-            entity = classify(text)
-
-            if entity == 'time\getTime':
-                speak(core.SystemInfo.get_time())
-            elif entity == 'time\getDate':
-                speak(core.SystemInfo.get_date())
-
-            print('Text: {}  Entity: {}'.format(text, entity))
+            
