@@ -1,4 +1,4 @@
-time\getTime
-open\google
-weather\getWeather
-time\getDate
+time|getTime
+time|getDate
+open|notepad
+weather|getWeather

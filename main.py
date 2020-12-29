@@ -21,13 +21,13 @@ def speak(text):
 def evaluate(text):
     #Reconhecer entidade do texto. 
     entity = classify(text)
-    if entity == 'time\getTime':
+    if entity == 'time|getTime':
         speak(core.SystemInfo.get_time())
-    elif entity == 'time\getDate':
+    elif entity == 'time|getDate':
         speak(core.SystemInfo.get_date())
 
     # Abrir programas
-    elif entity == 'open\notepad':
+    elif entity == 'open|notepad':
         speak('Abrindo o bloco de notas')
         os.system('notepad.exe')
 
