@@ -30,6 +30,9 @@ def evaluate(text):
     elif entity == 'open|notepad':
         speak('Abrindo o bloco de notas')
         os.system('notepad.exe')
+    elif entity == 'open|chrome':
+        speak('Abrindo o google chrome')
+        os.system('"C:/Program Files/Google/Chrome/Application/chrome.exe"')
 
     print('Text: {}  Entity: {}'.format(text, entity))
 

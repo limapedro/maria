@@ -39,3 +39,11 @@ commands:
     input:  Abrar o bloco de notas
     entity: open
     action: notepad
+  - commmand:
+    input:  Abrir chrome
+    entity: open
+    action: chrome
+  - commmand:
+    input:  Abra chrome
+    entity: open
+    action: chrome
