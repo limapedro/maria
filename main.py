@@ -18,6 +18,9 @@ def speak(text):
     engine.runAndWait()
 
 
+a = 2
+
+
 # Reconhecimento de fala
 
 model = Model('model')
